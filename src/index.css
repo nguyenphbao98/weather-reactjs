@@ -40,6 +40,7 @@ code {
 
   text-align: center;
   color: #eee;
+  position: relative;
 }
 
 .weather__input{
@@ -117,4 +118,57 @@ code {
 
 .weather__warm{
   background-image: url('./assets/warm.jpg');
+}
+
+.loading{
+  position: absolute;
+  display: flex;
+
+  animation: loading 1s infinite;
+}
+
+.loading-item{
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff7870;
+  border-radius: 50%;
+
+  margin: 0 10px
+}
+
+.wrapper, .loading__wrapper{
+  min-width: 300px;
+  min-height: 277px;
+}
+
+.loading__wrapper{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+@keyframes loading{
+  25%{
+    transform: rotate(90);
+  }
+  50%{
+    transform: rotate(200deg);
+  }
+
+  75%{
+    transform: rotate(160deg);
+  }
+
+  100%{
+    transform: rotate(180deg);
+  }
 }
